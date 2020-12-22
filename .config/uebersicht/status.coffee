@@ -1,6 +1,6 @@
 command: "$HOME/dotfiles/blocks/uebersicht-status.sh"
 
-refreshFrequency: 10000
+refreshFrequency: 600000
 
 render: (output) ->
   """

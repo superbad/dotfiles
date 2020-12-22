@@ -1,7 +1,7 @@
 command: "./query-spaces.sh"
 # command: "/usr/local/bin/yabai -m query --spaces"
 
-refreshFrequency: 1000
+refreshFrequency: 60000
 
 removeDuplicates: (ar) ->
   if ar.length == 0

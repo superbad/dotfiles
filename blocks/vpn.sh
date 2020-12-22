@@ -9,11 +9,13 @@ ALREADY_CONNECTED=$(cat /var/tmp/vpn-connected.txt)
 print_fa_icon 'shield-alt'
 if [[ "$VPN_CONNECTED" == 'false' ]]; then
     if [[ $ALREADY_CONNECTED == 'true' ]]; then
+        touch /var/tmp/public-ip-{time,data}.txt
         rm /var/tmp/public-ip-{time,data}.txt
     fi
     echo 'OFF'
 else
     if [[ $ALREADY_CONNECTED == 'false' ]]; then
+        touch /var/tmp/public-ip-{time,data}.txt
         rm /var/tmp/public-ip-{time,data}.txt
     fi
     VPN_IFACE=$(get_vpn_iface)
